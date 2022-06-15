@@ -1,0 +1,231 @@
+.ecosystem {
+    padding: 0 0 70px;
+    overflow: hidden;
+
+    .ecosystem-title {
+        width: 240px;
+        padding: 0 0 30px;
+    }
+
+    .ecosystem-caption {
+        margin: 0 0 30px;
+        width: 230px;
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 130%;
+        opacity: 1;
+        transition-duration: 0.8s;
+        color: #181f29;
+
+        &.hovered {
+            opacity: 0;
+            transition-duration: 0.8s;
+        }
+    }
+    .ecosystem-content {
+        position: relative;
+        transition-duration: 0.8s;
+        cursor: pointer;
+        background: none;
+
+        &.hovered {
+            transition-duration: 0.8s;
+            transform: translateX(-260px);
+        }
+
+        .ecosystem-line {
+            position: absolute;
+            top: -59px;
+            left: 355px;
+            z-index: 1;
+
+            &.first {
+                top: -15px;
+                left: 350px;
+            }
+
+            &.third {
+                top: -108px;
+                left: 399px;
+            }
+
+            svg {
+                g {
+                    opacity: 0;
+                    transition-duration: 0.8s;
+                }
+            }
+
+            &.hovered {
+                svg {
+                    g {
+                        opacity: 0.8;
+                        transition-duration: 0.8s;
+                    }
+                }
+            }
+        }
+    }
+
+    .ecosystem-infograph {
+        position: relative;
+        display: flex;
+        gap: 60px;
+        width: 300%;
+        height: 260px;
+        border-top: 2px solid #2051a3;
+    }
+
+    .ecosystem-infograph-undelay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: inherit;
+        background: #fff;
+        z-index: 2;
+    }
+
+    .ecosystem-info {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        max-width: 230px;
+        min-width: 230px;
+        width: 100%;
+        padding: 30px 0 0;
+        box-sizing: border-box;
+        z-index: 3;
+
+        .ecosystem-dot {
+            position: absolute;
+            top: -12px;
+            left: -9px;
+            width: 17px;
+            height: 17px;
+            background-color: #fff;
+            border: 2px solid #2051a3;
+            border-radius: 100px;
+        }
+
+        .ecosystem-circle {
+            position: absolute;
+            top: -120px;
+            left: -10px;
+            width: 240px;
+            height: 240px;
+            padding: 35px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 12px;
+            background: #2051a3;
+            border-radius: 100%;
+
+            font-family: "Montserrat";
+            font-style: normal;
+            font-weight: 600;
+            font-size: 15px;
+            line-height: 18px;
+
+            color: #f8f8fa;
+        }
+
+        .ecosystem-info-title {
+            max-width: 215px;
+            margin: 0 0 15px;
+            font-family: "Montserrat";
+            font-style: normal;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 20px;
+            color: #000;
+        }
+
+        .ecosystem-text {
+            margin: 0;
+            font-family: "Open Sans";
+            font-style: normal;
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 160%;
+            color: #181f29;
+            opacity: 1;
+            transition-duration: 0.8s;
+
+            &.hovered {
+                opacity: 0;
+                transition-duration: 0.8s;
+            }
+
+            &.small {
+                width: 150px;
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        padding: 0 0 50px;
+        position: relative;
+
+        .ecosystem-title {
+            position: absolute;
+            top: 0;
+            left: 20px;
+        }
+
+        .ecosystem-content {
+            position: relative;
+            top: 0;
+            left: 0;
+            padding: 165px 0 0 20px;
+            &.hovered {
+                transform: none;
+            }
+            overflow-x: scroll;
+
+            .ecosystem-line {
+                position: absolute;
+                top: 93px;
+                left: 368px;
+                z-index: 1;
+    
+                &.first {
+                    top: 150px;
+                    left: 370px;
+                }
+    
+                &.third {
+                    top: 69px;
+                    left: 425px;
+                   
+                }
+                    
+            }
+        }
+
+        .ecosystem-caption {
+            &.hovered {
+                opacity: 1;
+            }
+        }
+
+        .ecosystem-infograph {
+           
+            width: 1500px;
+          
+        }
+
+        .ecosystem-info {
+            .ecosystem-text {
+                &.hovered {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}

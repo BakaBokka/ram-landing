@@ -1,0 +1,14 @@
+.app-title {
+    max-width: 600px;
+    margin: 0 0 35px;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 130%;
+    color: #181f29;
+
+    @media (max-width: 768px) {
+     font-size: 26px;
+    }
+}

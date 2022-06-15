@@ -1,0 +1,104 @@
+.centres {
+    padding: 0 120px 70px;
+
+    .centres-list {
+        display: flex;
+        flex-direction: column;
+        gap: 35px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        .centres-item {
+            background: #f8f9fc;
+            border-radius: 10px;
+
+            .info-item-wrap .info-item {
+            }
+            .info-item-list {
+            }
+
+            .info-item-bg {
+                width: 620px;
+                height: 513px;
+                background: no-repeat url("../../images/nsk-centre-pic.png");
+                background-position: right bottom;
+                background-size: cover;
+            }
+
+            &:last-of-type {
+                .info-item-bg {
+                    width: 610px;
+                    height: 537px;
+                    background: no-repeat url("../../images/srt-centre-pic.png");
+                    background-position: right bottom;
+                    background-size: cover;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 1200px) {
+        padding: 0 80px 70px;
+    }
+
+    @media (max-width: 1000px) {
+        padding: 0 20px 70px;
+    }
+
+    @media (max-width: 768px) {
+        padding: 0 0 50px;
+
+        .centres-list {
+            .centres-item {
+                border-radius: 20px;
+            }
+        }
+
+        .centres-title {
+            padding: 0 20px;
+        }
+    }
+
+    @media (max-width: 500px) {
+        padding: 0 0 50px;
+
+        .centres-list {
+            .centres-item {
+                .info-item-list {
+                    margin: 0 0 320px;
+                }
+
+                .info-item-bg {
+                    width: 100%;
+                    height: auto;
+                    background: no-repeat url("../../images/nsk-centre-pic-mob.png");
+                    background-position: right center;
+                    background-size: cover;
+                    padding: 0 0 61% 0;
+                }
+
+                &:last-of-type {
+                    .info-item-list {
+                        margin: 0 0 370px;
+                    }
+                    .info-item-bg {
+                        top: auto;
+                        bottom: 0;
+                        width: 100%;
+                        height: auto;
+
+                        background: no-repeat url("../../images/srt-centre-pic-mob.png");
+                        background-position: right center;
+                        background-size: cover;
+                        padding: 0 0 90% 0;
+                    }
+                }
+
+                .info-buttons {
+                    display: none;
+                }
+            }
+        }
+    }
+}

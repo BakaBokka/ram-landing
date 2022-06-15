@@ -1,0 +1,113 @@
+.projects {
+    padding: 0 120px 70px;
+
+    .projects-list {
+        display: flex;
+        flex-direction: column;
+        gap: 35px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        .projects-item {
+            position: relative;
+            background: #e3f6f0;
+            border-radius: 10px;
+            display: flex;
+
+            .info-item-wrap {
+                .info-item {
+                    .info-item-list {
+                        grid-template-columns: 115px 240px;
+                        column-gap: 50px;
+
+                        .info-item-card {
+                            &:nth-child(2) {
+                                .info-item-card-title {
+                                    font-size: 35px;
+
+                                    .info-item-card-accent {
+                                        font-size: 18px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .info-item-bg {
+                        width: 600px;
+                        height: 501px;
+                        background: no-repeat url("../../images/projects-bg.png");
+                        background-position: right bottom;
+                        background-size: cover;
+                        opacity: 0.9;
+                    }
+                }
+            }
+        }
+    }
+
+    .info-item .info-item-list {
+        column-gap: 45px;
+        row-gap: 20px;
+    }
+
+    .info-item .info-item-header .info-item-tag {
+        background: #2051a3;
+    }
+
+    @media (max-width: 1200px) {
+        padding: 0 80px 70px;
+    }
+
+    @media (max-width: 1000px) {
+        padding: 0 20px 70px;
+    }
+
+    @media (max-width: 768px) {
+        padding: 0 0 50px;
+        border-radius: 20px;
+
+        .projects-title {
+            padding: 0 20px;
+        }
+
+        .projects-list {
+            .projects-item {
+                border-radius: 20px;
+            }
+        }
+    }
+
+    @media (max-width: 500px) {
+        .projects-list {
+            .projects-item {
+                .info-item-wrap {
+                    .info-item {
+                        .info-item-list {
+                            grid-template-columns: 115px 1fr;
+                            margin: 0 0 370px;
+                        }
+
+                        .info-item-bg {
+                            top: auto;
+                            bottom: 0;
+                            max-width: 500px;
+                            width: 100%;
+                            height: auto;
+                            background: no-repeat url("../../images/projects-bg-mob.png");
+                            background-position: right bottom;
+                            background-size: cover;
+                            padding: 0 0 86% 0;
+                        }
+                    }
+
+                    .info-item .info-item-list {
+                        column-gap: 25px;
+                        row-gap: 15px;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,48 @@
+.round-button {
+    position: relative;
+    width: 90px;
+    height: 90px;
+    padding: 42px 37px 40px 39px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+    outline: none;
+    border: none;   
+    background: #2051a3;
+    transition-duration: 0.6s;
+    cursor: pointer;
+    text-decoration: none;
+
+    &:hover {
+        width: 72px;
+        height: 72px;
+        padding: 25px 20px 40px 40px;
+        transition-duration: 0.6s;
+    }
+
+    &.transparent {
+        width: 60px;
+        height: 60px;
+        padding: 23px;
+        background: transparent;
+        border: 1px solid #181f29;
+
+        svg {
+            path {
+                fill: #181f29;
+            }
+        }
+
+        &:hover {
+            padding: 17px 17px 29px 29px;
+            background: #181f29;
+            svg {
+                path {
+                    fill: #fff;
+                }
+            }
+        }
+    }
+}

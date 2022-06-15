@@ -1,0 +1,25 @@
+.menu-button {
+    display: none;
+    gap: 8px;
+    padding: 13px 17px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 25px;
+    background: transparent;
+    outline: none;
+    cursor: pointer;
+
+    .menu-button-text {
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 15px;
+        letter-spacing: -0.084px;
+        color: #fff;
+    }
+
+    @media (max-width: 768px) {
+        display: flex;
+        align-items: center;
+    }
+}

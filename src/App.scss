@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700&subset=cyrillic");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap");
+
+.App {
+    position: relative;
+    margin: 0 auto;
+  
+    .container {
+        padding-right: 120px;
+        padding-left: 120px;
+        box-sizing: border-box;
+    }
+
+    @media (max-width: 1200px) {
+      .container {
+        padding-right: 80px;
+        padding-left: 80px;
+        box-sizing: border-box;
+    }
+    }
+
+    @media (max-width: 1000px) {
+      .container {
+        padding-right: 20px;
+        padding-left: 20px;
+        box-sizing: border-box;
+    }
+    }
+
+}

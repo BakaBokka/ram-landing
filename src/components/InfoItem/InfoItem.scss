@@ -1,0 +1,165 @@
+.info-item-wrap {
+    position: relative;
+    max-width: 100%;
+    width: 100%;
+
+    .info-item {
+        max-width: 610px;
+        width: 100%;
+        padding: 40px 30px 40px 40px;
+        box-sizing: border-box;
+
+        .info-item-header {
+            position: relative;
+            display: flex;
+            gap: 10px;
+            margin: 0 0 20px;
+            z-index: 2;
+
+            .info-item-caption {
+                max-width: 300px;
+                margin: 0;
+                font-family: "Montserrat";
+                font-style: normal;
+                font-weight: 600;
+                font-size: 24px;
+                line-height: 130%;
+                color: #181f29;
+            }
+
+            .info-item-tag {
+                width: fit-content;
+                width: -moz-fit-content;
+                height: 27px;
+                background: #e64938;
+                border-radius: 22px;
+                padding: 5px 10px;
+                box-sizing: border-box;
+                font-family: "Open Sans";
+                font-style: normal;
+                font-weight: 600;
+                font-size: 11px;
+                line-height: 160%;
+                color: #fff;
+            }
+        }
+
+        .info-item-text {
+            position: relative;
+            margin: 0 0 30px;
+            font-family: "Open Sans";
+            font-style: normal;
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 160%;
+            color: #181f29;
+            z-index: 2;
+        }
+
+        .info-item-list {
+            position: relative;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            column-gap: 110px;
+            row-gap: 40px;
+            margin: 0 0 30px;
+            padding: 0;
+            list-style: none;
+            z-index: 2;
+
+            .info-item-card {
+                display: flex;
+                flex-direction: column;
+                font-family: "Open Sans";
+                font-style: normal;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 160%;
+                color: #5f646c;
+
+                .info-item-card-title {
+                    margin: 0;
+                    font-family: "Montserrat";
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: 18px;
+                    line-height: 130%;
+                    color: #181f29;
+
+                    .info-item-card-accent {
+                        font-size: 35px;
+                    }
+                }
+            }
+        }
+
+        .info-buttons {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            font-family: "Montserrat";
+            font-style: normal;
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 22px;
+            color: #181f29;
+        }
+    }
+
+    .info-item-bg {
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: flex;
+        width: 575px;
+        height: 550px;
+        z-index: 1;
+
+        background: no-repeat url("../../images/phone-pic.png");
+        background-position: center;
+        background-size: cover;
+        transition-duration: 0.6s;
+    }
+
+    @media (max-width: 1200px) {
+        .info-item-bg {
+            transition-duration: 0.6s;
+            opacity: 0.5;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .info-item {
+            padding: 20px;
+            .info-item-header {
+                flex-direction: column;
+            }
+
+            .info-item-list {
+                column-gap: 45px;
+                row-gap: 25px;
+            }
+        }
+
+        .info-item-bg {
+            display: none;
+        }
+    }
+
+    @media (max-width: 500px) {
+        .info-item {
+            .info-item-list {
+                margin: 0 0 370px;
+            }
+        }
+
+        .info-item-bg {
+            opacity: 1;
+            display: flex;
+            top: auto;
+            bottom: 100px;
+            width: 375px;
+            height: 344px;
+        }
+    }
+}
