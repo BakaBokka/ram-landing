@@ -2,6 +2,7 @@ import React from "react";
 import "./MobileMenu.scss";
 import { ReactComponent as Close } from "../../images/close.svg";
 import { ReactComponent as Arrow } from "../../images/arrow.svg";
+import AnchorLink from 'react-anchor-link-smooth-scroll';
 import { PHONE } from "../../const";
 
 const MobileMenu = ({ onClick }) => {
@@ -16,29 +17,29 @@ const MobileMenu = ({ onClick }) => {
                 </header>
 
                 <ul className="mobile-menu-items">
-                    <li className="mobile-menu-item">
+                    <li className="mobile-menu-item" onClick={() => onClick()}>
                         <Arrow />
-                        <a className="mobile-menu-link" href="/">
+                        <AnchorLink className="mobile-menu-link" href="#company" offset='30'>
                             Компания
-                        </a>
+                        </AnchorLink>
                     </li>
-                    <li className="mobile-menu-item">
+                    <li className="mobile-menu-item" onClick={() => onClick()}>
                         <Arrow />
-                        <a className="mobile-menu-link" href="/">
+                        <AnchorLink className="mobile-menu-link" href="#ecosystem" offset='30'>
                             Экосистема
-                        </a>
+                        </AnchorLink>
                     </li>
-                    <li className="mobile-menu-item">
+                    <li className="mobile-menu-item" onClick={() => onClick()}>
                         <Arrow />
-                        <a className="mobile-menu-link" href="/">
+                        <AnchorLink className="mobile-menu-link" href="#projects" offset='30'>
                             Проекты
-                        </a>
+                        </AnchorLink>
                     </li>
-                    <li className="mobile-menu-item">
+                    <li className="mobile-menu-item" onClick={() => onClick()}>
                         <Arrow />
-                        <a className="mobile-menu-link" href="/">
+                        <AnchorLink className="mobile-menu-link" href="#geography" offset='30'>
                             География
-                        </a>
+                        </AnchorLink>
                     </li>
                 </ul>
             </div>

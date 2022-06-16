@@ -5,7 +5,7 @@ import { ReactComponent as Arrow } from "../../images/arrow.svg";
 const RoundButton = ({ link = "/", transparent }) => {
     const buttonClass = transparent ? "round-button transparent" : "round-button";
     return (
-        <a className={buttonClass} href={link} >
+        <a className={buttonClass} href={link} target="_blank" rel="noreferrer" >
             <div className="round-button-icon">
                 <Arrow />
             </div>

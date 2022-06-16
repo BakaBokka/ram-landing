@@ -53,6 +53,7 @@
             .banner-slide-video-container {
                 position: relative;
                 padding: 0 0 37% 0;
+                box-sizing: border-box;
 
                 .banner-slide-video {
                     position: absolute;
@@ -95,7 +96,6 @@
                 &:hover {
                     background: #fff;
                     svg {
-                       
                         path {
                             fill: #181f29;
                         }
@@ -103,11 +103,8 @@
                 }
             }
             .slider-button-next {
-                
-
                 svg {
                     transform: rotate(180deg);
-                   
                 }
             }
         }
@@ -170,7 +167,6 @@
                     left: 20px;
                     font-size: 26px;
                 }
-                
             }
         }
 
@@ -189,7 +185,6 @@
         }
     }
     @media (max-width: 768px) {
-       
         .banner-slider {
             .banner-slide {
                 .banner-slide-text {
@@ -197,8 +192,7 @@
                     top: 20%;
                 }
                 .banner-slide-video-container {
-                  height: 100vh;
-                  
+                    height: 100vh;
                 }
             }
         }

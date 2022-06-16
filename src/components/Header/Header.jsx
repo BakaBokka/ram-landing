@@ -3,6 +3,7 @@ import "./Header.scss";
 import logo from "../../images/logo.svg";
 import MenuButton from "../MenuButton/MenuButton";
 import MobileMenu from "../MobileMenu/MobileMenu";
+import AnchorLink from 'react-anchor-link-smooth-scroll'
 import {PHONE} from "../../const";
 
 const Header = () => {
@@ -19,16 +20,16 @@ const Header = () => {
 
                 <ul className="header-menu">
                     <li className="header-menu-item">
-                        <a href="/#">Компания</a>
+                        <AnchorLink href="#company" offset='50'>Компания</AnchorLink>
                     </li>
                     <li className="header-menu-item">
-                        <a href="/">Экосистема</a>
+                        <AnchorLink href="#ecosystem" offset='50'>Экосистема</AnchorLink>
                     </li>
                     <li className="header-menu-item">
-                        <a href="/">Проекты</a>
+                        <AnchorLink href="#projects" offset='50'>Проекты</AnchorLink>
                     </li>
                     <li className="header-menu-item">
-                        <a href="/">География</a>
+                        <AnchorLink href="#geography" offset='50'>География</AnchorLink>
                     </li>
                 </ul>
             </div>

@@ -74,7 +74,7 @@ const lkData = {
 
 const Foodtech = () => {
     return (
-        <section className="foodtech">
+        <section className="foodtech" id="foodtech">
             <div className="foodtech-title">
                 <Title text="Фудтех решения" />
             </div>

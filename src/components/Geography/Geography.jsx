@@ -23,7 +23,7 @@ const Geography = () => {
     };
 
     return (
-        <section className="geography ">
+        <section className="geography" id="geography">
             <header className="geography-header container">
                 <div className="geography-title">
                     <Title text="География развития" />

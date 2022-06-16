@@ -74,7 +74,7 @@ const saratovData = {
 
 const Centres = () => {
     return (
-        <section className="centres">
+        <section className="centres" id="centres">
             <div className="centres-title">
                 <Title text="Оптово-распределительные центры " />
             </div>

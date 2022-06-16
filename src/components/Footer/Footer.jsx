@@ -34,8 +34,8 @@ const Footer = () => {
 
                 <div className="app-footer-info">
                     <h3 className="app-footer-info-title">Быстрые ссылки</h3>
-                   <Link text="ОРЦ"/>
-                   <Link text="Маркетплейс"/>
+                   <Link text="ОРЦ" link="https://ramnsk.ru/"/>
+                   <Link text="Маркетплейс" link="https://rusagro.market/"/>
                    <Link text="Личный кабинет"/>
                 </div>
             </div>

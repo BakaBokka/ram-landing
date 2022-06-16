@@ -21,7 +21,7 @@ const Ecosystem = () => {
     };
 
     return (
-        <section className="ecosystem container">
+        <section className="ecosystem container" id="ecosystem">
             <div className="ecosystem-title">
                 <Title text="Экосистема холдинга" />
             </div>
