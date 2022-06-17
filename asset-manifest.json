@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/ram-landing/static/css/main.a1983ef8.css",
-    "main.js": "/ram-landing/static/js/main.e531df5a.js",
+    "main.css": "/ram-landing/static/css/main.48a11b75.css",
+    "main.js": "/ram-landing/static/js/main.473efe1d.js",
     "static/js/787.8054f70a.chunk.js": "/ram-landing/static/js/787.8054f70a.chunk.js",
     "static/media/video_header.mp4": "/ram-landing/static/media/video_header.cf659c5435053a68bdb2.mp4",
     "static/media/booklet.pdf": "/ram-landing/static/media/booklet.ec22d9db3dbe8997ec3d.pdf",
@@ -38,12 +38,12 @@
     "static/media/arrow.svg": "/ram-landing/static/media/arrow.20791d0310b3697ea36f6efc1ddd8208.svg",
     "static/media/close.svg": "/ram-landing/static/media/close.00079bc3ae213f885d81a5a1fd5ea788.svg",
     "static/media/arrow-right.svg": "/ram-landing/static/media/arrow-right.6f5975d5ab2aee54c73ee72deb4f6b96.svg",
-    "main.a1983ef8.css.map": "/ram-landing/static/css/main.a1983ef8.css.map",
-    "main.e531df5a.js.map": "/ram-landing/static/js/main.e531df5a.js.map",
+    "main.48a11b75.css.map": "/ram-landing/static/css/main.48a11b75.css.map",
+    "main.473efe1d.js.map": "/ram-landing/static/js/main.473efe1d.js.map",
     "787.8054f70a.chunk.js.map": "/ram-landing/static/js/787.8054f70a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a1983ef8.css",
-    "static/js/main.e531df5a.js"
+    "static/css/main.48a11b75.css",
+    "static/js/main.473efe1d.js"
   ]
 }
