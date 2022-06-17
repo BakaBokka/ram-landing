@@ -1,10 +1,21 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import Title from "../Title/Title";
 import map from "../../images/map.svg";
 import "./Geography.scss";
 import GeographyMapDot from "./GeographyMapDot/GeographyMapDot";
 
 const Geography = () => {
+    const geoRef = useRef();
+    const windowWidth = window.innerWidth / 1.5;
+
+    useEffect(() => {
+        geoRef.current.scrollTo({
+            top: 0,
+            right: windowWidth,
+            behavior: 'smooth'
+          });
+    }) ;
+
     const nskTooltipData = {
         caption1: "Запущена в эксплатацию первая очередь ОРЦ",
         caption2: "Запущен маркетплейс",
@@ -32,7 +43,7 @@ const Geography = () => {
                 <p className="geography-desc">Выступая связующим звеном между покупателями и поставщиками, мы эффективнно перераспределяем продукты на межрегиональном уровне.</p>
             </header>
 
-            <div className="geography-map">
+            <div className="geography-map" ref={geoRef}>
                 <div className="geography-map-image">
                     <img src={map} alt="Карта развития" />
                     <GeographyMapDot infoData={nskTooltipData} />
