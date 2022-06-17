@@ -40,7 +40,7 @@ const markerplaceData = {
 
 const Projects = () => {
     return (
-        <section className="projects" id="projects">
+        <section className="projects container" id="projects">
             <div className="projects-title">
                 <Title text="Проектные решения" />
             </div>

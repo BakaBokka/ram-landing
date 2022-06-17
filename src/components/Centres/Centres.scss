@@ -1,5 +1,8 @@
 .centres {
-    padding: 0 120px 70px;
+    max-width: 1680px;
+    width: 100%;
+    padding: 0 0 70px;
+    margin: 0 auto;
 
     .centres-list {
         display: flex;
@@ -12,11 +15,7 @@
         .centres-item {
             background: #f8f9fc;
             border-radius: 10px;
-
-            .info-item-wrap .info-item {
-            }
-            .info-item-list {
-            }
+            overflow: hidden;
 
             .info-item-bg {
                 width: 620px;
@@ -28,8 +27,8 @@
 
             &:last-of-type {
                 .info-item-bg {
-                    width: 610px;
-                    height: 537px;
+                    width: 580px;
+                    height: 516px;
                     background: no-repeat url("../../images/srt-centre-pic.png");
                     background-position: right bottom;
                     background-size: cover;
@@ -39,11 +38,11 @@
     }
 
     @media (max-width: 1200px) {
-        padding: 0 80px 70px;
+        padding: 0 0 70px;
     }
 
     @media (max-width: 1000px) {
-        padding: 0 20px 70px;
+        padding: 0 0 70px;
     }
 
     @media (max-width: 768px) {
@@ -66,7 +65,7 @@
         .centres-list {
             .centres-item {
                 .info-item-list {
-                    margin: 0 0 320px;
+                    margin: 0 0 340px;
                 }
 
                 .info-item-bg {
@@ -75,7 +74,7 @@
                     background: no-repeat url("../../images/nsk-centre-pic-mob.png");
                     background-position: right center;
                     background-size: cover;
-                    padding: 0 0 61% 0;
+                    padding: 0 0 65% 0;
                 }
 
                 &:last-of-type {
@@ -91,12 +90,42 @@
                         background: no-repeat url("../../images/srt-centre-pic-mob.png");
                         background-position: right center;
                         background-size: cover;
+                        padding: 0 0 75% 0;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 440px) {
+        .centres-list {
+            .centres-item {
+                .info-item-list {
+                    margin: 0 0 300px;
+                }
+
+                .info-item-bg {
+                    padding: 0 0 65% 0;
+                }
+
+                &:last-of-type {
+                    .info-item-list {
+                        margin: 0 0 360px;
+                    }
+                    .info-item-bg {
                         padding: 0 0 90% 0;
                     }
                 }
-
-                .info-buttons {
-                    display: none;
+            }
+        }
+    }
+    @media (max-width: 375px) {
+        .centres-list {
+            .centres-item {
+                &:last-of-type {
+                    .info-item-list {
+                        margin: 0 0 310px;
+                    }
                 }
             }
         }

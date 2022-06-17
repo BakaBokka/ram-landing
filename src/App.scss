@@ -4,27 +4,32 @@
 .App {
     position: relative;
     margin: 0 auto;
-  
+    // display: flex;
+    // flex-direction: column;
+    overflow: hidden;
+
     .container {
+        max-width: 1680px;
+        width: 100%;
+        margin: 0 auto;
         padding-right: 120px;
         padding-left: 120px;
         box-sizing: border-box;
     }
 
     @media (max-width: 1200px) {
-      .container {
-        padding-right: 80px;
-        padding-left: 80px;
-        box-sizing: border-box;
-    }
+        .container {
+            padding-right: 40px;
+            padding-left: 40px;
+            box-sizing: border-box;
+        }
     }
 
     @media (max-width: 1000px) {
-      .container {
-        padding-right: 20px;
-        padding-left: 20px;
-        box-sizing: border-box;
+        .container {
+            padding-right: 20px;
+            padding-left: 20px;
+            box-sizing: border-box;
+        }
     }
-    }
-
 }

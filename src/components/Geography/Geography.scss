@@ -10,7 +10,7 @@
     overflow: hidden;
 
     .geography-header {
-        margin: 0 0 50px;
+        margin: 0 auto 50px;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -38,6 +38,10 @@
         width: 100%;
         position: relative;
         overflow: scroll;
+        &::-webkit-scrollbar {
+            width: 0;
+        }
+        scrollbar-width: none;
         display: flex;
         justify-content: center;
         .geography-map-image {

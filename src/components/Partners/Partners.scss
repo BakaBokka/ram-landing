@@ -66,18 +66,21 @@
 
         .partners-content {
             overflow: scroll;
+            &::-webkit-scrollbar {
+                width: 0;
+            }
+            scrollbar-width: none;
             justify-content: flex-start;
 
             .partners-list {
                 flex-wrap: nowrap;
 
                 .partners-item {
-                  border-bottom: none;
+                    border-bottom: none;
                     &:nth-of-type(8) {
                         border-right: none;
                     }
                 }
-                
             }
         }
     }

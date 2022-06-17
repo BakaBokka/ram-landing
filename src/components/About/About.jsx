@@ -29,7 +29,6 @@ const About = () => {
                     </li>
                 </ul>
             </div>
-            <div className="about-bg" />
         </section>
     );
 };

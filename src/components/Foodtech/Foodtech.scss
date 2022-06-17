@@ -1,5 +1,8 @@
 .foodtech {
-    padding: 0 120px 70px;
+    max-width: 1680px;
+    width: 100%;
+    padding: 0 0 70px;
+    margin: 0 auto;
 
     .foodtech-list {
         display: flex;
@@ -18,7 +21,7 @@
             &:last-of-type {
                 .info-item-wrap .info-item-bg {
                     width: 670px;
-                    height: 592px;
+                    height: 594px;
                     background: no-repeat url("../../images/ipad-pic.png");
                     background-position: right bottom;
                     background-size: cover;
@@ -37,11 +40,11 @@
     }
 
     @media (max-width: 1200px) {
-        padding: 0 80px 70px;
+        padding: 0 0 70px;
     }
 
     @media (max-width: 1000px) {
-        padding: 0 20px 70px;
+        padding: 0 0 70px;
     }
 
     @media (max-width: 768px) {
@@ -80,13 +83,12 @@
                     .info-item-wrap {
                         .info-item {
                             .info-item-list {
-                                margin: 0 0 410px;
+                                margin: 0 0 370px;
                                 grid-template-columns: 1fr;
 
                                 .info-item-card {
                                     &:first-of-type {
                                         max-width: 225px;
-                                       
                                     }
                                     &:nth-of-type(2) {
                                         display: none;
@@ -95,7 +97,6 @@
                                         display: none;
                                     }
                                 }
-                                
                             }
                         }
 

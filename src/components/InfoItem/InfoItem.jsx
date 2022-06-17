@@ -3,7 +3,8 @@ import RoundButton from "../RoundButton/RoundButton";
 import "./InfoItem.scss";
 
 const InfoItem = ({ data }) => {
-    const { caption, tag, text, cards, buttonTitle, buttonLink } = data;
+    const { caption, tag, text, cards, buttonTitle, buttonLink, id } = data;
+    const captionClass = id === "lk" ? "info-item-caption lk " : "info-item-caption";
 
     const renderCards = cards?.map((card) => {
         return (
@@ -21,7 +22,7 @@ const InfoItem = ({ data }) => {
         <div className="info-item-wrap">
             <div className="info-item">
                 <div className="info-item-header">
-                    <h3 className="info-item-caption">{caption}</h3>
+                    <h3 className={captionClass}>{caption}</h3>
                     {!!tag && <span className="info-item-tag">{tag}</span>}
                 </div>
                 <p className="info-item-text">{text}</p>

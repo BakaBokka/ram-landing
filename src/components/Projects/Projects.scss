@@ -1,5 +1,8 @@
 .projects {
-    padding: 0 120px 70px;
+    max-width: 1680px;
+    width: 100%;
+    padding: 0 0 70px;
+    margin: 0 auto;
 
     .projects-list {
         display: flex;
@@ -57,11 +60,11 @@
     }
 
     @media (max-width: 1200px) {
-        padding: 0 80px 70px;
+        padding: 0 0 70px;
     }
 
     @media (max-width: 1000px) {
-        padding: 0 20px 70px;
+        padding: 0 0 70px;
     }
 
     @media (max-width: 768px) {

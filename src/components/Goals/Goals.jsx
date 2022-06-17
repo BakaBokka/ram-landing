@@ -22,18 +22,17 @@ const infoData = [
 const Goals = () => {
     const [showText, setShowText] = useState(false);
     const [itemId, setShowItemId] = useState(null);
-   
 
-    const handleShowText = ( id ) => {
+    const handleShowText = (id) => {
         setShowText(!showText);
         setShowItemId(id);
     };
 
     const renderInfo = () =>
         infoData.map((item) => {
-            const iconClass = showText && (item.id === itemId) ? "goals-info-icon clicked" : "goals-info-icon";
-            const textClass = showText && (item.id === itemId) ? "goals-info-text clicked" : "goals-info-text";
-           
+            const iconClass = showText && item.id === itemId ? "goals-info-icon clicked" : "goals-info-icon";
+            const textClass = showText && item.id === itemId ? "goals-info-text clicked" : "goals-info-text";
+
             return (
                 <li className="goals-info-item" key={item.id} id={item.id} onClick={() => handleShowText(item.id)}>
                     <div className="goals-info-caption">
@@ -53,7 +52,7 @@ const Goals = () => {
             <div className="goal-title">
                 <Title text="Стратегические цели проекта" />
             </div>
-            
+
             <div className="goals-content">
                 <ul className="goals-info-list">{renderInfo()}</ul>
                 <div className="goals-picture" />

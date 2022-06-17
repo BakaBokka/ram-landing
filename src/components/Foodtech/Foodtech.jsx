@@ -4,7 +4,7 @@ import "./Foodtech.scss";
 import InfoItem from "../InfoItem/InfoItem";
 
 const markerplaceData = {
-    id: 1,
+    id: "mp",
     caption: "Продуктовый оптовый маркетплейс",
     tag: "Запущен",
     text: "Онлайн-платформа для размещения заказа с единым каталогом продуктов, в первую очередь, категории FRESH, с упаковкой, автоматизированной логистикой и доставкой заказа клиенту.",
@@ -38,7 +38,7 @@ const markerplaceData = {
     buttonLink: "https://rusagro.market/",
 };
 const lkData = {
-    id: 1,
+    id: "lk",
     caption: "Личный Кабинет Арендатора",
     tag: "В разработке",
     text: "Для организации управления персоналом, пропусками на территорию, услугами ОРЦ и получения информации арендаторам доступен Личный Кабинет, который является удобным средством взаимодействия с инфраструктурой ОРЦ. ",
@@ -74,7 +74,7 @@ const lkData = {
 
 const Foodtech = () => {
     return (
-        <section className="foodtech" id="foodtech">
+        <section className="foodtech container" id="foodtech">
             <div className="foodtech-title">
                 <Title text="Фудтех решения" />
             </div>

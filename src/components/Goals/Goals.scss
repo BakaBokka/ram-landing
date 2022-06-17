@@ -46,7 +46,6 @@
                 font-weight: 600;
                 line-height: 130%;
                 color: #181f29;
-                cursor: pointer;
 
                 .goals-info-number {
                     font-size: 13px;
@@ -113,7 +112,7 @@
             }
         }
     }
-    @media (max-width: 1440px) {
+    @media (max-width: 1680px) {
         .goals-content {
             gap: 80px;
 
@@ -143,6 +142,7 @@
                 .goals-info-caption {
                     max-width: 100%;
                     min-width: 335px;
+                    cursor: pointer;
                 }
 
                 .goals-info-text {

@@ -2,45 +2,61 @@
     position: relative;
     width: 90px;
     height: 90px;
-    padding: 42px 37px 40px 39px;
     box-sizing: border-box;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 100px;
     outline: none;
-    border: none;   
+    border: none;
     background: #2051a3;
     transition-duration: 0.6s;
     cursor: pointer;
     text-decoration: none;
 
+    .round-button-icon {
+        svg {
+            transition-duration: 0.6s;
+        }
+    }
+
     &:hover {
-        width: 72px;
-        height: 72px;
-        padding: 25px 20px 40px 40px;
+        transform: scale(0.8);
         transition-duration: 0.6s;
+
+        .round-button-icon {
+            svg {
+                transition-duration: 0.6s;
+                transform: translate(10px, -10px) scale(1.2);
+            }
+        }
     }
 
     &.transparent {
         width: 60px;
         height: 60px;
-        padding: 23px;
+
+        transform: unset;
         background: transparent;
         border: 1px solid #181f29;
 
-        svg {
-            path {
-                fill: #181f29;
+        .round-button-icon {
+            svg {
+                transition-duration: 0.6s;
+                path {
+                    fill: #181f29;
+                }
             }
         }
 
         &:hover {
-            padding: 17px 17px 29px 29px;
             background: #181f29;
-            svg {
-                path {
-                    fill: #fff;
+            .round-button-icon {
+                svg {
+                    transform: translate(5px, -5px) scale(1);
+                    path {
+                        fill: #fff;
+                    }
                 }
             }
         }

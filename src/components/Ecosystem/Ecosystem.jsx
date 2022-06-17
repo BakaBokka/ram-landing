@@ -21,12 +21,12 @@ const Ecosystem = () => {
     };
 
     return (
-        <section className="ecosystem container" id="ecosystem">
+        <section className="ecosystem" id="ecosystem">
             <div className="ecosystem-title">
                 <Title text="Экосистема холдинга" />
             </div>
 
-            <div className={contentClass} onPointerEnter={onHoverOn} onPointerLeave={onHoverOff}>
+            <div className={contentClass} onPointerEnter={onHoverOn} onPointerLeave={onHoverOff} onTouchStart={onHoverOn} onTouchEnd={onHoverOff}>
                 <h3 className={captionClass}>Поставщики, производители</h3>
                 <div className="ecosystem-infograph">
                     <div className="ecosystem-info">

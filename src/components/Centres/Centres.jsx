@@ -69,12 +69,12 @@ const saratovData = {
         },
     ],
     buttonTitle: "Презентация",
-    buttonLink: "https://ramnsk.ru/",
+    buttonLink: null
 };
 
 const Centres = () => {
     return (
-        <section className="centres" id="centres">
+        <section className="centres container" id="centres">
             <div className="centres-title">
                 <Title text="Оптово-распределительные центры " />
             </div>

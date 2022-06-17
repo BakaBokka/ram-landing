@@ -1,7 +1,10 @@
 .ecosystem {
-    padding: 0 0 70px;
-    overflow: hidden;
-
+    max-width: 1680px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 0 70px 120px;
+    box-sizing: border-box;
+    
     .ecosystem-title {
         width: 240px;
         padding: 0 0 30px;
@@ -26,6 +29,7 @@
     }
     .ecosystem-content {
         position: relative;
+        width: 300%;
         transition-duration: 0.8s;
         cursor: pointer;
         background: none;
@@ -73,7 +77,7 @@
         position: relative;
         display: flex;
         gap: 60px;
-        width: 300%;
+        width: 100%;
         height: 260px;
         border-top: 2px solid #2051a3;
     }
@@ -99,15 +103,20 @@
         box-sizing: border-box;
         z-index: 3;
 
+        &:empty {
+            height: 0;
+        }
+
         .ecosystem-dot {
             position: absolute;
-            top: -12px;
-            left: -9px;
+            top: -10px;
+            left: -3px;
             width: 17px;
             height: 17px;
             background-color: #fff;
             border: 2px solid #2051a3;
             border-radius: 100px;
+            box-sizing: border-box;
         }
 
         .ecosystem-circle {
@@ -168,8 +177,18 @@
         }
     }
 
+   
+
+    @media (max-width: 1200px) {
+        padding: 0 0 70px 40px;
+    }
+
+    @media (max-width: 1000px) {
+        padding: 0 0 70px 20px;
+    }
+
     @media (max-width: 768px) {
-        padding: 0 0 50px;
+        padding: 0 0 50px 20px;
         position: relative;
 
         .ecosystem-title {
@@ -181,50 +200,75 @@
         .ecosystem-content {
             position: relative;
             top: 0;
-            left: 0;
-            padding: 165px 0 0 20px;
+            left: -10px;
+            width: 100%;
+            padding: 165px 0 0 10px;
             &.hovered {
                 transform: none;
             }
             overflow-x: scroll;
+            &::-webkit-scrollbar {
+                width: 0;
+            }
+            scrollbar-width: none;
 
             .ecosystem-line {
                 position: absolute;
-                top: 93px;
-                left: 368px;
+                top: 160px;
+                left: 192px;
                 z-index: 1;
-    
+
                 &.first {
-                    top: 150px;
-                    left: 370px;
+                    top: 204px;
+                    left: 198px;
                 }
-    
+
                 &.third {
-                    top: 69px;
-                    left: 425px;
-                   
+                    top: 73px;
+                    left: 166px;
                 }
-                    
             }
         }
 
         .ecosystem-caption {
+            font-size: 16px;
             &.hovered {
                 opacity: 1;
             }
         }
 
         .ecosystem-infograph {
-           
-            width: 1500px;
-          
+            width: 1200px;
+            height: 200px;
+            gap: 30px;
         }
 
         .ecosystem-info {
+            padding: 20px 0 0;
+
+            &:first-of-type {
+                max-width: 170px;
+                min-width: auto;
+            }
+
+            &:nth-of-type(2) {
+                max-width: 140px;
+                min-width: auto;
+            }
             .ecosystem-text {
+                font-size: 14px;
                 &.hovered {
                     opacity: 1;
                 }
+            }
+
+            .ecosystem-circle {
+                top: -85px;
+                left: -33px;
+                width: 170px;
+                height: 170px;
+                padding: 22px;
+                font-size: 12px;
             }
         }
     }
