@@ -25,6 +25,7 @@ const GeographyMapDot = ({ id = "", infoData }) => {
     const [showInfo, setShowInfo] = useState(false);
     const infoClass = showInfo ? "geography-info-list shown" : "geography-info-list";
     const dotClass = id === "srt" ? "geography-map-dot srt" : "geography-map-dot";
+    const isMobile = window.innerWidth < 768;
 
     const hoverOn = () => {
         setShowInfo(true);
@@ -34,16 +35,26 @@ const GeographyMapDot = ({ id = "", infoData }) => {
         setShowInfo(false);
     };
 
+    const handleClick = () => {
+        setShowInfo(!showInfo);
+    };
+
     return (
         <>
-            <div className={dotClass} onPointerEnter={hoverOn} onPointerLeave={hoverOff} ref={setReferenceElement}>
-                <div className="geography-map-dot-underlay" onPointerEnter={hoverOn} onPointerLeave={hoverOff} />
+            <div
+                className={dotClass}
+                onPointerEnter={!isMobile ? hoverOn : () => {}}
+                onPointerLeave={!isMobile ? hoverOff : () => {}}
+                onClick={isMobile ? handleClick : () => {}}
+                ref={setReferenceElement}
+            >
+                <div className="geography-map-dot-underlay" />
             </div>
             <ul className={infoClass} ref={setPopperElement} style={styles.popper} {...attributes.popper}>
                 <li className="geography-info">{infoData.caption1}</li>
                 {!!infoData.caption2 && <li className="geography-info">{infoData.caption2}</li>}
                 <li className="geography-info items">
-                    <ul >
+                    <ul>
                         <li>{infoData.item1}</li>
                         <li>{infoData.item2}</li>
                     </ul>

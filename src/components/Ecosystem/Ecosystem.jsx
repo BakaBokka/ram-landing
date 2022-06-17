@@ -12,7 +12,8 @@ const Ecosystem = () => {
     const captionClass = hovered ? "ecosystem-caption hovered" : "ecosystem-caption";
     const textClass = hovered ? "ecosystem-text small hovered" : "ecosystem-text small";
     const lineClass = hovered ? "ecosystem-line hovered" : "ecosystem-line";
-
+    const isMobile = window.innerWidth < 768;
+ 
     const onHoverOn = () => {
         setHovered(true);
     };
@@ -20,13 +21,17 @@ const Ecosystem = () => {
         setHovered(false);
     };
 
+    const handleClick = () => {
+        setHovered(!hovered);
+    }
+
     return (
         <section className="ecosystem" id="ecosystem">
             <div className="ecosystem-title">
                 <Title text="Экосистема холдинга" />
             </div>
 
-            <div className={contentClass} onPointerEnter={onHoverOn} onPointerLeave={onHoverOff} onTouchStart={onHoverOn} onTouchEnd={onHoverOff}>
+            <div className={contentClass} onPointerEnter={!isMobile ? onHoverOn : () => {}} onPointerLeave={ !isMobile ? onHoverOff : () => {}} onClick={ isMobile ? handleClick : () => {}}>
                 <h3 className={captionClass}>Поставщики, производители</h3>
                 <div className="ecosystem-infograph">
                     <div className="ecosystem-info">
@@ -57,7 +62,7 @@ const Ecosystem = () => {
                             Продукт является интегрированной с логистическими центрами онлайн-платформой сбора заказов, хранения и доставки FMCG в сегменте B2B, B2C.
                         </p>
                     </div>
-                    <div className="ecosystem-infograph-undelay"/>
+                    <div className="ecosystem-infograph-undelay" />
                 </div>
                 <div className={`${lineClass} first`}>
                     <FirstLine />
@@ -67,7 +72,6 @@ const Ecosystem = () => {
                 </div>
                 <div className={`${lineClass} third`}>
                     <ThirdLine />
-                    
                 </div>
             </div>
         </section>
