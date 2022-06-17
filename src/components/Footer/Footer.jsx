@@ -9,7 +9,10 @@ const Footer = () => {
     return (
         <footer className="app-footer ">
             <div className="container">
-                <Logo />
+                <a href="/">
+                    <Logo />
+                </a>
+
                 <div className="app-footer-content">
                     <div className="app-footer-info">
                         <h3 className="app-footer-info-title">Центральный офис в Москве</h3>

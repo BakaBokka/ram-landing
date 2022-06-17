@@ -3,33 +3,43 @@ import "./Header.scss";
 import logo from "../../images/logo.svg";
 import MenuButton from "../MenuButton/MenuButton";
 import MobileMenu from "../MobileMenu/MobileMenu";
-import AnchorLink from 'react-anchor-link-smooth-scroll'
-import {PHONE} from "../../const";
+import AnchorLink from "react-anchor-link-smooth-scroll";
+import { PHONE } from "../../const";
 
 const Header = () => {
     const [showMenu, setShowMenu] = useState(false);
 
     const handleShowMenu = () => {
-      setShowMenu(!showMenu);
-    }
+        setShowMenu(!showMenu);
+    };
 
     return (
         <header className="app-header container">
             <div className="header-nav">
-                <img className="header-logo" src={logo} alt="Логотип РусАгроМаркет" />
+                <a href="/">
+                    <img className="header-logo" src={logo} alt="Логотип РусАгроМаркет" />
+                </a>
 
                 <ul className="header-menu">
                     <li className="header-menu-item">
-                        <AnchorLink href="#company" offset='50'>Компания</AnchorLink>
+                        <AnchorLink href="#company" offset="50">
+                            Компания
+                        </AnchorLink>
                     </li>
                     <li className="header-menu-item">
-                        <AnchorLink href="#ecosystem" offset='50'>Экосистема</AnchorLink>
+                        <AnchorLink href="#ecosystem" offset="50">
+                            Экосистема
+                        </AnchorLink>
                     </li>
                     <li className="header-menu-item">
-                        <AnchorLink href="#projects" offset='50'>Проекты</AnchorLink>
+                        <AnchorLink href="#projects" offset="50">
+                            Проекты
+                        </AnchorLink>
                     </li>
                     <li className="header-menu-item">
-                        <AnchorLink href="#geography" offset='50'>География</AnchorLink>
+                        <AnchorLink href="#geography" offset="50">
+                            География
+                        </AnchorLink>
                     </li>
                 </ul>
             </div>
@@ -40,15 +50,15 @@ const Header = () => {
                 </a>
                 <ul className="header-socials">
                     <li className="header-social">
-                        <a href="/">Telegram</a>
+                        <a href="https://t.me/RusAgroMarket_bot">Telegram</a>
                     </li>
                     <li className="header-social">
                         <a href={`https://api.whatsapp.com/send/?phone=${PHONE}`}>WhatsApp</a>
                     </li>
                 </ul>
             </div>
-            <MenuButton onClick={handleShowMenu}/>
-           {!!showMenu && <MobileMenu onClick={handleShowMenu} />}
+            <MenuButton onClick={handleShowMenu} />
+            {!!showMenu && <MobileMenu onClick={handleShowMenu} />}
         </header>
     );
 };

@@ -30,7 +30,9 @@ const InfoItem = ({ data }) => {
                 <div className="info-item-bg" />
                 {!!buttonLink && (
                     <div className="info-buttons">
-                        <span>{buttonTitle}</span>
+                        <a className="info-buttons-link" href={buttonLink} target="_blank" rel="noreferrer">
+                            {buttonTitle}
+                        </a>
 
                         <RoundButton link={buttonLink} transparent={true} />
                     </div>

@@ -43,7 +43,9 @@ const Banner = () => {
                     <h1 className="banner-slide-text">{slide.text} </h1>
                     <div className="banner-button">
                         <RoundButton link={booklet} />
-                        <span>Скачать презентацию</span>
+                        <a className="banner-button-link" href={booklet} target="_blank" rel="noreferrer">
+                            Скачать презентацию
+                        </a>
                     </div>
 
                     {sliderData.length > 1 && (

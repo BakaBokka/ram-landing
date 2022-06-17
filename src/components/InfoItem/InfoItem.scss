@@ -27,7 +27,7 @@
                 color: #181f29;
 
                 &.lk {
-                  max-width: 230px;
+                    max-width: 230px;
                 }
             }
 
@@ -101,12 +101,16 @@
             display: flex;
             align-items: center;
             gap: 20px;
-            font-family: "Montserrat";
-            font-style: normal;
-            font-weight: 600;
-            font-size: 18px;
-            line-height: 22px;
-            color: #181f29;
+
+            .info-buttons-link {
+                font-family: "Montserrat";
+                font-style: normal;
+                font-weight: 600;
+                font-size: 18px;
+                line-height: 22px;
+                color: #181f29;
+                text-decoration: none;
+            }
         }
     }
 

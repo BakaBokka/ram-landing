@@ -5,9 +5,9 @@ import "./About.scss";
 
 const About = () => {
     return (
-        <section className="about container">
+        <section className="about container" id="company">
             <div className="about-content">
-                <Title text="О компании" id="company" />
+                <Title text="О компании"  />
                 <div className="about-text-container">
                     <p className="about-text">
                         Холдинг РусАгроМаркет был учрежден для реализации федеральной сети Оптово- распределительных центров на территории Российской Федерации.
