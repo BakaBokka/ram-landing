@@ -69,7 +69,7 @@ const lkData = {
         },
     ],
     buttonTitle: "Демо",
-    buttonLink: "/",
+    buttonLink: null,
 };
 
 const Foodtech = () => {

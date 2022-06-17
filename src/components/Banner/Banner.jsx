@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./Banner.scss";
 import bg from "../../images/mock-bg.png";
+import poster from "../../images/poster.jpeg";
 import { ReactComponent as ArrowRight } from "../../images/arrow-right.svg";
 import RoundButton from "../RoundButton/RoundButton";
 import video from "../../video/video_header.mp4";
@@ -35,7 +36,7 @@ const Banner = () => {
             <SwiperSlide key={slide.id} virtualIndex={slide.id}>
                 <div className="banner-slide container">
                     <div className="banner-slide-video-container">
-                        {!!slide.video && <video className="banner-slide-video" src={slide.video} muted autoPlay loop playsInline />}
+                        {!!slide.video && <video className="banner-slide-video" src={slide.video} muted autoPlay loop playsInline poster={poster} />}
                         {!!slide.pic && <img className="banner-slide-video" src={slide.pic} alt="Фоновая фотография" />}
                         <div className="banner-slide-video-bg" />
                     </div>
