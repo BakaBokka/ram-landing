@@ -1,4 +1,5 @@
 import './App.scss';
+import { YMInitializer } from "react-yandex-metrika";
 import Header from './components/Header/Header';
 import Banner from './components/Banner/Banner';
 import About from './components/About/About';
@@ -23,8 +24,17 @@ function App() {
       <Foodtech />
       <Projects />
       <Map />
-      <Partners/>
-      <Footer/>
+      <Partners />
+      <Footer />
+      {/* <YMInitializer
+        accounts={[89230767]}
+        options={{
+          clickmap: true,
+          trackLinks: true,
+          accurateTrackBounce: true,
+
+        }}
+      /> */}
     </div>
   );
 }
