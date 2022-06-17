@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/ram-landing/static/css/main.9f8edb39.css",
-    "main.js": "/ram-landing/static/js/main.d03d8e69.js",
+    "main.css": "/ram-landing/static/css/main.6418ff73.css",
+    "main.js": "/ram-landing/static/js/main.65fdfc76.js",
     "static/js/787.8054f70a.chunk.js": "/ram-landing/static/js/787.8054f70a.chunk.js",
     "static/media/video_header.mp4": "/ram-landing/static/media/video_header.cf659c5435053a68bdb2.mp4",
     "static/media/booklet.pdf": "/ram-landing/static/media/booklet.ec22d9db3dbe8997ec3d.pdf",
@@ -31,20 +31,20 @@
     "static/media/vtb.svg": "/ram-landing/static/media/vtb.6705491fac5de9bec6da8e5421a96e6a.svg",
     "static/media/magnit.svg": "/ram-landing/static/media/magnit.74ba18fc2a2fc1c45217c6e7611a60ff.svg",
     "static/media/hamburger.svg": "/ram-landing/static/media/hamburger.42c9995b5bd8378531c5ac530922b687.svg",
-    "static/media/warehouse.svg": "/ram-landing/static/media/warehouse.586d416dadb3fa10da50f2dd5e8aa789.svg",
     "index.html": "/ram-landing/index.html",
+    "static/media/warehouse.svg": "/ram-landing/static/media/warehouse.586d416dadb3fa10da50f2dd5e8aa789.svg",
     "static/media/third-line.svg": "/ram-landing/static/media/third-line.b28814e9f78e21ed50abfd1bfe1bf6ca.svg",
     "static/media/second-line.svg": "/ram-landing/static/media/second-line.56bd97202094cdf7ccbc20f923e36fcc.svg",
     "static/media/line.svg": "/ram-landing/static/media/line.319fa00614168c3f4b56a2bc8c91563f.svg",
     "static/media/arrow.svg": "/ram-landing/static/media/arrow.20791d0310b3697ea36f6efc1ddd8208.svg",
     "static/media/close.svg": "/ram-landing/static/media/close.00079bc3ae213f885d81a5a1fd5ea788.svg",
     "static/media/arrow-right.svg": "/ram-landing/static/media/arrow-right.6f5975d5ab2aee54c73ee72deb4f6b96.svg",
-    "main.9f8edb39.css.map": "/ram-landing/static/css/main.9f8edb39.css.map",
-    "main.d03d8e69.js.map": "/ram-landing/static/js/main.d03d8e69.js.map",
+    "main.6418ff73.css.map": "/ram-landing/static/css/main.6418ff73.css.map",
+    "main.65fdfc76.js.map": "/ram-landing/static/js/main.65fdfc76.js.map",
     "787.8054f70a.chunk.js.map": "/ram-landing/static/js/787.8054f70a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9f8edb39.css",
-    "static/js/main.d03d8e69.js"
+    "static/css/main.6418ff73.css",
+    "static/js/main.65fdfc76.js"
   ]
 }
