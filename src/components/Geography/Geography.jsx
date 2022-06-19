@@ -3,15 +3,20 @@ import Title from "../Title/Title";
 import map from "../../images/map.svg";
 import "./Geography.scss";
 import GeographyMapDot from "./GeographyMapDot/GeographyMapDot";
+import { IS_MOBILE } from "../../const";
 
 const Geography = () => {
     const geoRef = useRef();
-    const offset = window.innerWidth < 768 && window.innerWidth > 500 ? 50 : 150;
+    const isMobile = window.innerWidth < 768;
+    const offset = isMobile && window.innerWidth > 500 ? 50 : 150;
 
     useEffect(() => {
-        setTimeout(() => {
-            geoRef.current.scrollBy(offset, 0);
-        }, 100);
+        if (IS_MOBILE) {
+            setTimeout(() => {
+                console.log(window.innerWidth, " MAP OFFSET =", offset);
+                geoRef.current.scrollBy(offset, 0);
+            }, 100);
+        }
     });
 
     const nskTooltipData = {
