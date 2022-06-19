@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/ram-landing/static/css/main.7eab2e7d.css",
-    "main.js": "/ram-landing/static/js/main.0cecb788.js",
+    "main.js": "/ram-landing/static/js/main.32735c5c.js",
     "static/js/787.8054f70a.chunk.js": "/ram-landing/static/js/787.8054f70a.chunk.js",
     "static/media/video_header.mp4": "/ram-landing/static/media/video_header.cf659c5435053a68bdb2.mp4",
     "static/media/booklet.pdf": "/ram-landing/static/media/booklet.ec22d9db3dbe8997ec3d.pdf",
@@ -40,11 +40,11 @@
     "static/media/close.svg": "/ram-landing/static/media/close.00079bc3ae213f885d81a5a1fd5ea788.svg",
     "static/media/arrow-right.svg": "/ram-landing/static/media/arrow-right.6f5975d5ab2aee54c73ee72deb4f6b96.svg",
     "main.7eab2e7d.css.map": "/ram-landing/static/css/main.7eab2e7d.css.map",
-    "main.0cecb788.js.map": "/ram-landing/static/js/main.0cecb788.js.map",
+    "main.32735c5c.js.map": "/ram-landing/static/js/main.32735c5c.js.map",
     "787.8054f70a.chunk.js.map": "/ram-landing/static/js/787.8054f70a.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.7eab2e7d.css",
-    "static/js/main.0cecb788.js"
+    "static/js/main.32735c5c.js"
   ]
 }
