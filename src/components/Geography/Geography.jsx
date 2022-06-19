@@ -7,16 +7,16 @@ import { IS_MOBILE } from "../../const";
 
 const Geography = () => {
     const geoRef = useRef();
-    const isMobile = window.innerWidth < 768;
-    const offset = isMobile && window.innerWidth > 500 ? 25 : 75;
+    // const isMobile = window.innerWidth < 768;
+    // const offset = isMobile && window.innerWidth > 500 ? 25 : 75;
 
     useEffect(() => {
         if (IS_MOBILE) {
-            geoRef.current.scrollBy(offset, 0);
+            // geoRef.current.scrollBy(150, 0);
             setTimeout(() => {
-                console.log(window.innerWidth, " MAP OFFSET =", offset, " scrollLeft: ", geoRef.current.scrollLeft);
-                geoRef.current.scrollBy(offset, 0);
-            }, 300);
+                geoRef.current.scrollBy(150, 0);
+                console.log(window.innerWidth,  " scrollLeft: ", geoRef.current.scrollLeft);
+            }, 600);
         }
     });
 
