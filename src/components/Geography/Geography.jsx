@@ -13,10 +13,14 @@ const Geography = () => {
     useEffect(() => {
         if (IS_MOBILE) {
             // geoRef.current.scrollBy(150, 0);
-            setTimeout(() => {
-                geoRef.current.scrollBy(150, 0);
-                console.log(window.innerWidth,  " scrollLeft: ", geoRef.current.scrollLeft);
-            }, 600);
+            if (IS_MOBILE) {
+                setTimeout(() => {
+                    geoRef.current.scrollBy(150, 0);
+                }, 100);
+                setTimeout(() => {
+                    console.log(window.innerWidth, " scrollLeft: ", geoRef.current.scrollLeft);
+                }, 200);
+            }
         }
     });
 
