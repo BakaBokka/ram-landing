@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { usePopper } from "react-popper";
+import { IS_MOBILE } from "../../../const";
 
 const GeographyMapDot = ({ id = "", infoData }) => {
     const [referenceElement, setReferenceElement] = useState(null);
@@ -25,7 +26,6 @@ const GeographyMapDot = ({ id = "", infoData }) => {
     const [showInfo, setShowInfo] = useState(false);
     const infoClass = showInfo ? "geography-info-list shown" : "geography-info-list";
     const dotClass = id === "srt" ? "geography-map-dot srt" : "geography-map-dot";
-    const isMobile = window.innerWidth < 768;
 
     const hoverOn = () => {
         setShowInfo(true);
@@ -43,9 +43,9 @@ const GeographyMapDot = ({ id = "", infoData }) => {
         <>
             <div
                 className={dotClass}
-                onPointerEnter={!isMobile ? hoverOn : () => {}}
-                onPointerLeave={!isMobile ? hoverOff : () => {}}
-                onClick={isMobile ? handleClick : () => {}}
+                onPointerEnter={!IS_MOBILE ? hoverOn : () => {}}
+                onPointerLeave={!IS_MOBILE ? hoverOff : () => {}}
+                onClick={IS_MOBILE ? handleClick : () => {}}
                 ref={setReferenceElement}
             >
                 <div className="geography-map-dot-underlay" />

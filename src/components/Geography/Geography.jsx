@@ -1,20 +1,22 @@
 import React, { useEffect, useRef } from "react";
 import Title from "../Title/Title";
 import map from "../../images/map.svg";
+import {IS_MOBILE} from "../../const";
 import "./Geography.scss";
 import GeographyMapDot from "./GeographyMapDot/GeographyMapDot";
 
 const Geography = () => {
     const geoRef = useRef();
-    const windowWidth = window.innerWidth / 1.5;
-
+     
     useEffect(() => {
-        geoRef.current.scrollTo({
-            top: 0,
-            right: windowWidth,
-            behavior: 'smooth'
-          });
-    }) ;
+        if (IS_MOBILE) {
+            setTimeout(() => {
+                geoRef.current.scrollBy(150, 0);
+            }, 100);
+        }
+    });
+
+    console.log(IS_MOBILE)
 
     const nskTooltipData = {
         caption1: "Запущена в эксплатацию первая очередь ОРЦ",
@@ -43,10 +45,10 @@ const Geography = () => {
                 <p className="geography-desc">Выступая связующим звеном между покупателями и поставщиками, мы эффективнно перераспределяем продукты на межрегиональном уровне.</p>
             </header>
 
-            <div className="geography-map" ref={geoRef}>
+            <div className="geography-map" id="map" ref={geoRef}>
                 <div className="geography-map-image">
                     <img src={map} alt="Карта развития" />
-                    <GeographyMapDot infoData={nskTooltipData} />
+                    <GeographyMapDot id="nsk" infoData={nskTooltipData} />
                     <GeographyMapDot id="srt" infoData={srtTooltipData} />
                 </div>
             </div>
