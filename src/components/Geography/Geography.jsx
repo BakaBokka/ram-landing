@@ -1,22 +1,18 @@
 import React, { useEffect, useRef } from "react";
 import Title from "../Title/Title";
 import map from "../../images/map.svg";
-import {IS_MOBILE} from "../../const";
 import "./Geography.scss";
 import GeographyMapDot from "./GeographyMapDot/GeographyMapDot";
 
 const Geography = () => {
     const geoRef = useRef();
-     
-    useEffect(() => {
-        if (IS_MOBILE) {
-            setTimeout(() => {
-                geoRef.current.scrollBy(150, 0);
-            }, 100);
-        }
-    });
+    const offset = window.innerWidth < 768 && window.innerWidth > 500 ? 50 : 150;
 
-    console.log(IS_MOBILE)
+    useEffect(() => {
+        setTimeout(() => {
+            geoRef.current.scrollBy(offset, 0);
+        }, 100);
+    });
 
     const nskTooltipData = {
         caption1: "Запущена в эксплатацию первая очередь ОРЦ",
