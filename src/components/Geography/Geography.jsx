@@ -10,18 +10,18 @@ const Geography = () => {
     const geoRef = useRef();
     const isMobile = window.innerWidth < 768;
 
-    useEffect(() => {
-        if (isMobile) {
-            setOffset(300);
-             console.log(offset)
-            setTimeout(() => {
-                geoRef.current.scrollBy(offset, 0);
-            }, 100);
-            setTimeout(() => {
-                console.log(window.innerWidth, " scrollLeft: ", geoRef.current.scrollLeft);
-            }, 200);
-        }
-    },[offset, isMobile]);
+    // useEffect(() => {
+    //     if (isMobile) {
+    //         setOffset(300);
+    //          console.log(offset)
+    //         setTimeout(() => {
+    //             geoRef.current.scrollBy(offset, 0);
+    //         }, 100);
+    //         setTimeout(() => {
+    //             console.log(window.innerWidth, " scrollLeft: ", geoRef.current.scrollLeft);
+    //         }, 200);
+    //     }
+    // },[offset, isMobile]);
 
     const nskTooltipData = {
         caption1: "Запущена в эксплатацию первая очередь ОРЦ",

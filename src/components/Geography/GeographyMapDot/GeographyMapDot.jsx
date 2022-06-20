@@ -1,10 +1,13 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { usePopper } from "react-popper";
 import { IS_MOBILE } from "../../../const";
 
 const GeographyMapDot = ({ id = "", infoData }) => {
     const [referenceElement, setReferenceElement] = useState(null);
     const [popperElement, setPopperElement] = useState(null);
+    const [offset, setOffset] = useState(0);
+    const isMobile = window.innerWidth < 768;
+    const map = document.getElementById("map");
     const { styles, attributes } = usePopper(referenceElement, popperElement, {
         placement: "top",
         modifiers: [
@@ -22,6 +25,29 @@ const GeographyMapDot = ({ id = "", infoData }) => {
             },
         ],
     });
+    // console.log(isMobile)
+
+    useEffect(() => {
+        if (isMobile) {
+            setOffset(150);
+            setTimeout(() => {
+                map && map.scrollBy(offset, 0);
+            }, 600);
+            setTimeout(() => {
+              console.log("OFFSET:", offset, "SCROLLLEFT:", map?.scrollLeft);
+            }, 700)
+           
+        } else {
+            setOffset(0);
+            setTimeout(() => {
+                map && map.scrollBy(offset, 0);
+            }, 600);
+            setTimeout(() => {
+              console.log("OFFSET:", offset, "SCROLLLEFT:", map?.scrollLeft);
+            }, 700)
+        }
+       
+    }, [offset, isMobile, map]);
 
     const [showInfo, setShowInfo] = useState(false);
     const infoClass = showInfo ? "geography-info-list shown" : "geography-info-list";
