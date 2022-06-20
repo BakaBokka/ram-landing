@@ -12,10 +12,10 @@ const Geography = () => {
 
     useEffect(() => {
         if (IS_MOBILE) {
-            // geoRef.current.scrollBy(150, 0);
+            
             if (IS_MOBILE) {
                 setTimeout(() => {
-                    geoRef.current.scrollBy(150, 0);
+                    geoRef.current.scrollBy(300, 0);
                 }, 100);
                 setTimeout(() => {
                     console.log(window.innerWidth, " scrollLeft: ", geoRef.current.scrollLeft);
