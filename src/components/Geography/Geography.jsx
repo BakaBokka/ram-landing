@@ -15,9 +15,7 @@ const Geography = () => {
                 setTimeout(() => {
                     geoRef.current.scrollBy(300, 0);
                 }, 100);
-                setTimeout(() => {
-                    console.log(window.innerWidth, " scrollLeft: ", geoRef.current.scrollLeft);
-                }, 200);
+             
             }
         }
     });
