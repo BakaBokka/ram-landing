@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Title from "../Title/Title";
 import map from "../../images/map.svg";
 import "./Geography.scss";
@@ -6,19 +6,22 @@ import GeographyMapDot from "./GeographyMapDot/GeographyMapDot";
 import { IS_MOBILE } from "../../const";
 
 const Geography = () => {
+    const [offset, setOffset] = useState(0);
     const geoRef = useRef();
+    const isMobile = window.innerWidth < 768;
 
     useEffect(() => {
-        if (IS_MOBILE) {
-            
-            if (IS_MOBILE) {
-                setTimeout(() => {
-                    geoRef.current.scrollBy(300, 0);
-                }, 100);
-             
-            }
+        if (isMobile) {
+            setOffset(300);
+             console.log(offset)
+            setTimeout(() => {
+                geoRef.current.scrollBy(offset, 0);
+            }, 100);
+            setTimeout(() => {
+                console.log(window.innerWidth, " scrollLeft: ", geoRef.current.scrollLeft);
+            }, 200);
         }
-    });
+    },[offset, isMobile]);
 
     const nskTooltipData = {
         caption1: "Запущена в эксплатацию первая очередь ОРЦ",
