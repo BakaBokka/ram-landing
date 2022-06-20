@@ -7,8 +7,6 @@ import { IS_MOBILE } from "../../const";
 
 const Geography = () => {
     const geoRef = useRef();
-    // const isMobile = window.innerWidth < 768;
-    // const offset = isMobile && window.innerWidth > 500 ? 25 : 75;
 
     useEffect(() => {
         if (IS_MOBILE) {
