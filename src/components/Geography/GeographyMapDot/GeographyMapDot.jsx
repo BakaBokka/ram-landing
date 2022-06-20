@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { usePopper } from "react-popper";
-import { IS_MOBILE } from "../../../const";
 
 const GeographyMapDot = ({ id = "", infoData }) => {
     const [referenceElement, setReferenceElement] = useState(null);
@@ -24,8 +23,7 @@ const GeographyMapDot = ({ id = "", infoData }) => {
                 },
             },
         ],
-    });
-    // console.log(isMobile)
+    });    
 
     useEffect(() => {
         if (isMobile) {
@@ -69,9 +67,9 @@ const GeographyMapDot = ({ id = "", infoData }) => {
         <>
             <div
                 className={dotClass}
-                onPointerEnter={!IS_MOBILE ? hoverOn : () => {}}
-                onPointerLeave={!IS_MOBILE ? hoverOff : () => {}}
-                onClick={IS_MOBILE ? handleClick : () => {}}
+                onPointerEnter={!isMobile ? hoverOn : () => {}}
+                onPointerLeave={!isMobile ? hoverOff : () => {}}
+                onClick={isMobile ? handleClick : () => {}}
                 ref={setReferenceElement}
             >
                 <div className="geography-map-dot-underlay" />

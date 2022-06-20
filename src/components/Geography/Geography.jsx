@@ -1,28 +1,10 @@
-import React, { useEffect, useRef, useState } from "react";
+import React from "react";
 import Title from "../Title/Title";
 import map from "../../images/map.svg";
 import "./Geography.scss";
 import GeographyMapDot from "./GeographyMapDot/GeographyMapDot";
-import { IS_MOBILE } from "../../const";
 
 const Geography = () => {
-    const [offset, setOffset] = useState(0);
-    const geoRef = useRef();
-    const isMobile = window.innerWidth < 768;
-
-    // useEffect(() => {
-    //     if (isMobile) {
-    //         setOffset(300);
-    //          console.log(offset)
-    //         setTimeout(() => {
-    //             geoRef.current.scrollBy(offset, 0);
-    //         }, 100);
-    //         setTimeout(() => {
-    //             console.log(window.innerWidth, " scrollLeft: ", geoRef.current.scrollLeft);
-    //         }, 200);
-    //     }
-    // },[offset, isMobile]);
-
     const nskTooltipData = {
         caption1: "Запущена в эксплатацию первая очередь ОРЦ",
         caption2: "Запущен маркетплейс",
@@ -50,7 +32,7 @@ const Geography = () => {
                 <p className="geography-desc">Выступая связующим звеном между покупателями и поставщиками, мы эффективнно перераспределяем продукты на межрегиональном уровне.</p>
             </header>
 
-            <div className="geography-map" id="map" ref={geoRef}>
+            <div className="geography-map" id="map" >
                 <div className="geography-map-image">
                     <img src={map} alt="Карта развития" />
                     <GeographyMapDot id="nsk" infoData={nskTooltipData} />
