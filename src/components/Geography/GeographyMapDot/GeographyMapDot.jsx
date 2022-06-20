@@ -31,19 +31,13 @@ const GeographyMapDot = ({ id = "", infoData }) => {
             setTimeout(() => {
                 map && map.scrollBy(offset, 0);
             }, 600);
-            setTimeout(() => {
-              console.log("OFFSET:", offset, "SCROLLLEFT:", map?.scrollLeft);
-            }, 700)
-           
+                      
         } else {
             setOffset(0);
             setTimeout(() => {
                 map && map.scrollBy(offset, 0);
             }, 600);
-            setTimeout(() => {
-              console.log("OFFSET:", offset, "SCROLLLEFT:", map?.scrollLeft);
-            }, 700)
-        }
+                   }
        
     }, [offset, isMobile, map]);
 
