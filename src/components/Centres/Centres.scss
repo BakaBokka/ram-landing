@@ -16,20 +16,31 @@
             background: #f8f9fc;
             border-radius: 10px;
             overflow: hidden;
-
-            .info-item-bg {
-                width: 620px;
-                height: 513px;
-                background: no-repeat url("../../images/nsk-centre-pic.png");
-                background-position: right bottom;
-                background-size: cover;
+            &.nsk {
+                .info-item-bg {
+                    width: 620px;
+                    height: 513px;
+                    background: no-repeat url("../../images/nsk-centre-pic.png");
+                    background-position: right bottom;
+                    background-size: cover;
+                }
             }
 
-            &:last-of-type {
+            &.srt {
                 .info-item-bg {
                     width: 580px;
                     height: 516px;
                     background: no-repeat url("../../images/srt-centre-pic.png");
+                    background-position: right bottom;
+                    background-size: cover;
+                }
+            }
+
+            &.rst {
+                .info-item-bg {
+                    width: 580px;
+                    height: 516px;
+                    background: no-repeat url("../../images/rst-centre-pic.png");
                     background-position: right bottom;
                     background-size: cover;
                 }
@@ -64,20 +75,22 @@
 
         .centres-list {
             .centres-item {
-                .info-item-list {
-                    margin: 0 0 340px;
+                &.nsk {
+                    .info-item-list {
+                        margin: 0 0 340px;
+                    }
+
+                    .info-item-bg {
+                        width: 100%;
+                        height: auto;
+                        background: no-repeat url("../../images/nsk-centre-pic-mob.png");
+                        background-position: right center;
+                        background-size: cover;
+                        padding: 0 0 65% 0;
+                    }
                 }
 
-                .info-item-bg {
-                    width: 100%;
-                    height: auto;
-                    background: no-repeat url("../../images/nsk-centre-pic-mob.png");
-                    background-position: right center;
-                    background-size: cover;
-                    padding: 0 0 65% 0;
-                }
-
-                &:last-of-type {
+                &.srt {
                     .info-item-list {
                         margin: 0 0 370px;
                     }
@@ -93,6 +106,23 @@
                         padding: 0 0 75% 0;
                     }
                 }
+
+                &.rst {
+                    .info-item-list {
+                        margin: 0 0 330px;
+                    }
+                    .info-item-bg {
+                        top: auto;
+                        bottom: 0;
+                        width: 100%;
+                        height: auto;
+                        background: no-repeat url("../../images/rst-centre-pic.png");
+                        background-size: cover;
+                        width: 400px;
+                        height: 340px;
+                        background-position: 50% 0;
+                    }
+                }
             }
         }
     }
@@ -104,16 +134,24 @@
                     margin: 0 0 300px;
                 }
 
-                .info-item-bg {
-                    padding: 0 0 65% 0;
+                &.nsk {
+                    .info-item-bg {
+                        padding: 0 0 65% 0;
+                    }
                 }
 
-                &:last-of-type {
+                &.srt {
                     .info-item-list {
                         margin: 0 0 360px;
                     }
                     .info-item-bg {
                         padding: 0 0 90% 0;
+                    }
+                }
+
+                &.rst {
+                    .info-item-bg {
+                        background-position: -150% 0;
                     }
                 }
             }
@@ -122,7 +160,7 @@
     @media (max-width: 375px) {
         .centres-list {
             .centres-item {
-                &:last-of-type {
+                &.srt {
                     .info-item-list {
                         margin: 0 0 310px;
                     }

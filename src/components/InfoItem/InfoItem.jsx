@@ -5,10 +5,12 @@ import "./InfoItem.scss";
 const InfoItem = ({ data }) => {
     const { caption, tag, text, cards, buttonTitle, buttonLink, id } = data;
     const captionClass = id === "lk" ? "info-item-caption lk " : "info-item-caption";
-
+    
     const renderCards = cards?.map((card) => {
+        const cardClass =  card.wordBreak ? "info-item-card word-break" : "info-item-card";
+
         return (
-            <li className="info-item-card" key={card.id}>
+            <li className={cardClass} key={card.id}>
                 <h4 className="info-item-card-title">
                     <span className="info-item-card-accent">{card.accent}</span>
                     {card.title}

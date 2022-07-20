@@ -72,6 +72,42 @@ const saratovData = {
     buttonLink: null
 };
 
+const rostovData = {
+    id: 1,
+    caption: "ОРЦ в Ростове-на-Дону",
+    tag: "Проектирование",
+    text: "Реализация проекта позволит единовременно хранить более 40 тысяч тонн сельскохозяйственной продукции в мультитемпературных складах и торговых павильонах, а также создать более 500 рабочих мест. Для местных производителей сельхоз продукции ОРЦ откроет новые удобные каналы сбыта, включаещие не только традиционную торговлю в павильонах, но и онлайн-площадку.",
+    cards: [
+        {
+            id: 1,
+            title: " га",
+            accent: "200",
+            text: "Земельный участок",
+        },
+        {
+            id: 2,
+            title: " тыс. м²",
+            accent: "70",
+            text: "площадь 1й очереди",
+        },
+        {
+            id: 3,
+            title: " тыс. м²",
+            accent: "50",
+            text: "2 мультитемпературных склада",
+            wordBreak: true
+        },
+        {
+            id: 4,
+            title: "  тыс. м²",
+            accent: "20",
+            text: "2 торговых павильона",
+        },
+    ],
+    buttonTitle: "Презентация",
+    buttonLink: null
+};
+
 const Centres = () => {
     return (
         <section className="centres container" id="centres">
@@ -80,11 +116,14 @@ const Centres = () => {
             </div>
 
             <ul className="centres-list">
-                <li className="centres-item">
+                <li className="centres-item nsk">
                     <InfoItem data={nskData} />
                 </li>
-                <li className="centres-item">
+                <li className="centres-item srt">
                     <InfoItem data={saratovData} />
+                </li>
+                <li className="centres-item rst">
+                    <InfoItem data={rostovData} />
                 </li>
             </ul>
         </section>

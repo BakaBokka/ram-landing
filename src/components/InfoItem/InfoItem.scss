@@ -17,7 +17,7 @@
             z-index: 2;
 
             .info-item-caption {
-                max-width: 300px;
+                max-width: 305px;
                 margin: 0;
                 font-family: "Montserrat";
                 font-style: normal;
@@ -168,6 +168,17 @@
             bottom: 100px;
             width: 375px;
             height: 344px;
+        }
+    }
+    @media (max-width: 375px) {
+        .info-item {
+            .info-item-list {
+                .info-item-card {
+                    &.word-break {
+                        word-break: break-all;
+                    }
+                }
+            }
         }
     }
 }
