@@ -19,8 +19,8 @@ const Footer = () => {
                         <a className="app-footer-info-tel" href={`tel:${PHONE}`}>
                             8 800 500 93 32
                         </a>
-                        <a className="app-footer-info-mail" href="mailto:info@rosagromarket.ru">
-                            info@rosagromarket.ru
+                        <a className="app-footer-info-mail" href="mailto:info@rusagromarket.ru">
+                            info@rusagromarket.ru
                         </a>
                         <span className="app-footer-info-address">Москва, 1-й Магистральный туп., д. 5А БЦ «Магистраль Плаза»</span>
                     </div>
@@ -30,8 +30,8 @@ const Footer = () => {
                         <a className="app-footer-info-tel" href={`tel:${PHONE}`}>
                             8 800 500 93 32
                         </a>
-                        <a className="app-footer-info-mail" href="mailto:info@rosagromarket.ru">
-                            info@rosagromarket.ru
+                        <a className="app-footer-info-mail" href="mailto:info@rusagromarket.ru">
+                            info@rusagromarket.ru
                         </a>
                         <span className="app-footer-info-address">Новосибирская область, Обь городской округ, нп. 3307 км, 30кА1</span>
                     </div>
